@@ -1,0 +1,21 @@
+
+import React from 'react';
+import Todo from './Todo';
+export default function TodoList(props) {
+    function mapTodos(){
+        return(
+            props.todos.map((todo) => (
+                <Todo key={todo.id} task={todo.item} id={todo.id} completed={todo.completed} clicked={props.todoclicked}/>
+            ))
+        )
+    }
+    return (
+      <div>
+        <h1>Todos:</h1>
+        {
+          //console.log(mapTodos())
+          mapTodos()
+        }
+      </div>
+    );
+}
