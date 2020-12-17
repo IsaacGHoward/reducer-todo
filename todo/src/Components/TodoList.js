@@ -5,7 +5,7 @@ export default function TodoList(props) {
     function mapTodos(){
         return(
             props.todos.map((todo) => (
-                <Todo key={todo.id} task={todo.item} id={todo.id} completed={todo.completed} clicked={props.todoclicked}/>
+                <Todo key={todo.id} task={todo.item} id={todo.id} completed={todo.completed} dispatch={props.dispatch}/>
             ))
         )
     }
