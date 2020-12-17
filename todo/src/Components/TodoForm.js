@@ -6,7 +6,7 @@ export default function TodoForm(props){
         <div>
             <input placeholder="Add Todo" onChange={(e) => setNewTodo(e.target.value)} value={newTodo}/>
             <button onClick={() => props.dispatch({type: "ADD", payload: newTodo})}>Add</button> 
-            <button >Remove Finished</button>
+            <button onClick={() => props.dispatch({type:"CLEAR"})} >Remove Finished</button>
         </div>
     )
 }
