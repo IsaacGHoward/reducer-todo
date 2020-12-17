@@ -13,7 +13,6 @@ export default function TodoList(props) {
       <div>
         <h1>Todos:</h1>
         {
-          //console.log(mapTodos())
           mapTodos()
         }
       </div>
